@@ -1,0 +1,2 @@
+DEBUG_MODE=1
+MONGODB_URI=uri_here
