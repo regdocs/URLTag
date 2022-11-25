@@ -1,0 +1,8 @@
+{
+    "cmake.configureOnOpen": false,
+    "editor.renderLineHighlight": "all",
+    "workbench.colorCustomizations": {
+        "editor.lineHighlightBackground": "#3a3d4e",
+        "editor.lineHighlightBorder": "#3a3d4e",
+    }
+}
