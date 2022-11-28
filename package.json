@@ -11,6 +11,7 @@
   "author": "Jayanta Pandit <jay.dnb@outlook.in>",
   "license": "ISC",
   "devDependencies": {
+    "@types/express": "^4.17.17",
     "@types/node": "^18.15.3",
     "nodemon": "^2.0.21",
     "rimraf": "^4.4.0",
