@@ -1,4 +1,6 @@
-exports.log_error = async (e: any, res: any) => {
+import { Response } from "express";
+
+export const log_error = async (e: Error, res: Response) => {
     console.error(e);
     res.status(500).json({
         success: false,
