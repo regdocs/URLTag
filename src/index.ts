@@ -1,6 +1,7 @@
 import * as moduleGenerate from "./generate";
 import * as moduleListener from "./listener";
 import * as moduleAdmin from "./admin";
+import * as modulePing from "./ping";
 
 const cors = require("cors");
 const express = require("express");
@@ -68,5 +69,6 @@ API uptime: <b>${sayUptime()}</b></pre>
 app.use("/urltag/generate", moduleGenerate.router);
 app.use("/urltag/emit", moduleListener.router);
 app.use("/urltag/inspect", moduleAdmin.router);
+app.use("/ping", modulePing.router);
 
 app.listen(process.env.PORT || 4000);
