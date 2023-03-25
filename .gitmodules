@@ -1,0 +1,3 @@
+[submodule "xp-mailer"]
+	path = xp-mailer
+	url = https://github.com/morgue-io/xp-mailer
