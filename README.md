@@ -1,5 +1,9 @@
-# URLTag
+<img src="https://img.shields.io/badge/URLTag-0.5--beta.0-yellow" /> <img src="https://img.shields.io/badge/Node.js-v12%2B-green" /> <img src="https://img.shields.io/badge/Python-v3.10%2B-orange" /> <img src="https://img.shields.io/badge/TypeScript-v5.0.2-blue" /> <img src="https://img.shields.io/badge/Express.js-v4.18.2-red" /> <img src="https://img.shields.io/badge/license-MIT-blueviolet" />
+
+# URLTag REST API
 Custom tag analytics REST API for the web (generate URL tags and track in batches). API documentation for URLTag [`v0.5-beta.0`](https://github.com/jayzsh/URLTag/releases/tag/v0.5-beta.0) can be found in [`docs/api.md`](/docs/api.md). Create a fork for adding your own modifications.
+
+<p align="center"><img src="https://cdn.discordapp.com/attachments/1089566491864727563/1089566562081583104/Screenshot_from_2023-03-26_20-36-47.png" width="400" /></p>
 
 <br />
 
