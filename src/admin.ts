@@ -82,7 +82,6 @@ router.get(
                 .findOne({ _id: req.query.batch_name });
 
             if (payload == null) {
-                console.log(req.query.batch_name)
                 res.status(404).json({
                     success: false,
                     message: "404! Batch not found in cluster",
