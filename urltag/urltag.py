@@ -84,7 +84,7 @@ def inspect_one():
     if uri[-1] == '':
         uri = uri[0:-1]
     
-    batch_name = bytes(uri[-1].split('?k=')[0], 'utf-8')
+    batch_name = binascii.unhexlify(uri[-1].split('?k=')[0]).decode()
     batch_key = uri[-1].split('?k=')[1]
 
     uri = URLTAG_API_URI + f'/urltag/inspect/{batch_name}'
@@ -92,12 +92,7 @@ def inspect_one():
 
     res_data = res.json()
     if res_data['success'] and res_data['payload'][batch_key]:
-        # print(res_data['payload'][batch_key])
-        print(f'\n [🗸] Record found')
-        time.sleep(0.5)
-
-        print('\n [🗸] Hits: ', end='')
-        print(res_data['payload'][batch_key])
+        print(f'\n [🗸] Record found: {res_data["payload"][batch_key]} hit(s)')
     
     else:
         print('\n [✗] Could not fetch hits: ', end='')
@@ -137,7 +132,7 @@ def inspect_many():
             print('\n [🗸] Hits: \n')
 
             count = 1
-            b64_batch_name = hex(int(y, 16))[2:].upper()
+            b64_batch_name = binascii.hexlify(y.encode()).decode().upper()
             for key in res_data['payload']:
                 if key != '_id':
                     value = res_data['payload'][key]
@@ -191,7 +186,7 @@ def main():
                     time.sleep(0.4)
                     return
         except Exception as e:
-            pass
+            print(e)
 
 if __name__ == "__main__":
     main()
